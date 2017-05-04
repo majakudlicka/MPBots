@@ -18,7 +18,7 @@ router.get('/webhook', (req, res) => {
   }
 });
 
-router.post('/webhook', (req, res) => {
+app.post('/webhook', (req, res) => {
 
   const data = req.body;
   console.log('data is    ', data);
@@ -33,7 +33,7 @@ router.post('/webhook', (req, res) => {
       // Iterate over each messaging event
       entry.messaging.forEach((event) => {
         if (event.message) {
-          receivedMessage(event);
+          webhook.receivedMessage(event);
         } else {
           console.log('Webhook received unknown event: ', event);
         }
@@ -48,5 +48,6 @@ router.post('/webhook', (req, res) => {
     res.sendStatus(200);
   }
 });
+
 
 module.exports = router;
