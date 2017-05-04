@@ -82,3 +82,5 @@ function callSendAPI(messageData) {
     }
   });
 }
+
+module.exports = webhook;
