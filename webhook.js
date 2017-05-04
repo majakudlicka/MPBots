@@ -25,6 +25,7 @@ function receivedMessage(event) {
   const messageId = message.mid;
 
   const messageText = message.text;
+  console.log(message);
   const messageAttachments = message.attachments;
 
   if (messageText) {
