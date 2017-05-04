@@ -8,6 +8,7 @@ var router = express.Router();
 });
 
 router.get('/webhook', (req, res) => {
+  console.log(req.query);
   if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === process.env.FB_SECRET) {
     console.log('Validating webhook');
