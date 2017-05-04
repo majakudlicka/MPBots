@@ -83,4 +83,8 @@ function callSendAPI(messageData) {
   });
 }
 
-module.exports = webhook;
+module.exports = {
+  callSendAPI,
+  sendTextMessage,
+  receivedMessage
+}
